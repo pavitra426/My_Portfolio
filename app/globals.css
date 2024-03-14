@@ -2,32 +2,167 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*::selection {
+    color: #61D4FF;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.orbit {
+    position: absolute;
+    top: calc(50% - 75px);
+    right: 20px;
+    width: 150px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8A9296;
+    animation: shadowanim 3s linear infinite;
+}
+
+.orbit-item-ul {
+    position: absolute;
+    transform-origin: center;
+    animation: turn 25s linear infinite;
+}
+
+.orbit-item-ul:hover {
+    animation-play-state: paused;
+}
+
+.orbit-item-li {
+    width: 90px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+    border: 1px solid #C5C3EA;
+}
+
+.orbit-item-li:hover {
+    box-shadow: 0px 0px 100px 20px #C5C3EA;
+    animation: shadowanimli 2s ease infinite;
+}
+
+.orbit-item-li div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    animation: turn 25s linear infinite reverse;
+}
+
+.orbit-item-li div .tooltip {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    height: auto;
+    width: auto;
+}
+
+.orbit-item-li div img {
+    width: 50px;
+    height: 50px;
+    transition: all 1s ease;
+}
+
+.orbit-item-li:hover div img {
+    width: 30px;
+    height: 30px;
+}
+
+.orbit-item-li:hover .tooltip {
+    display: block;
+}
+
+.orbit-item-ul:hover .orbit-item-li div {
+    animation-play-state: paused;
+}
+
+.home-textArea {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-textArea::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: #61D4FF;
+    box-shadow: 0px 0px 100px 100px #61D4FF;
+    animation: turn 10s infinite linear;
+}
+
+.home-textArea::after {
+    content: '';
+    position: absolute;
+    background: #191C1E;
+    inset: 1px;
+    border-radius: 1.5rem;
+}
+
+@keyframes turn {
+    100% {
+        rotate: 1turn;
+    }
+}
+
+@keyframes shadowanim {
+    0% {
+        box-shadow: 0px 0px 150px 20px #61D4FF;
+    }
+    50% {
+        box-shadow: 0px 0px 80px 20px #61D4FF;
+    }
+    100% {
+        box-shadow: 0px 0px 150px 20px #61D4FF;
+    }
+}
+
+@keyframes shadowanimli {
+    0% {
+        box-shadow: 0px 0px 100px 20px #C5C3EA;
+    }
+    50% {
+        box-shadow: 0px 0px 50px 20px #C5C3EA;
+    }
+    100% {
+        box-shadow: 0px 0px 100px 20px #C5C3EA;
+    }
 }
