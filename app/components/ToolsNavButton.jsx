@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@nextui-org/react';
+import { Button } from '@nextui-org/button';
 import React from 'react'
 import NextLink from "next/link";
 import { usePathname } from 'next/navigation';

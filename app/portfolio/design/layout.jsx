@@ -1,5 +1,4 @@
 import AppBar from '@/app/components/AppBar'
-import SubNavButton from '@/app/components/SubNavButton'
 import ToolsBar from '@/app/components/ToolsBar'
 import ToolsNavButton from '@/app/components/ToolsNavButton'
 import AdobeXD from '@/app/icons/tools/AdobeXD'
@@ -17,7 +16,7 @@ export default function Layout({children}) {
                     {children}
                 </div>
                 <ToolsBar>
-                    <div className='flex items-center justify-start gap-3 uppercase text-tertiary-onTertiaryContainer text-medium p-5 tracking-widest border-b-1 border-utils-outline'>
+                    <div className='flex items-center justify-start gap-3 uppercase text-tertiary-onTertiaryContainer text-medium p-5 tracking-widest border-b-1 border-utils-outline/30'>
                         <Handyman />
                         <div>
                             Tools

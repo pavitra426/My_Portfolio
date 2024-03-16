@@ -12,6 +12,11 @@
     color: #61D4FF;
 }
 
+body {
+    position: relative;
+    height: 100svh;
+}
+
 canvas {
     position: absolute;
     top: 0;

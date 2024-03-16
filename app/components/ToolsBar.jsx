@@ -22,7 +22,7 @@ export default function ToolsBar({children}) {
     }, [])
 
     return (
-        <div ref={toolsBar} className='flex flex-col w-fit h-full bg-tertiary-tertiaryContainer rounded-tl-3xl rounded-bl-3xl min-w-[250px]'>
+        <div ref={toolsBar} className='flex flex-col w-fit h-full bg-tertiary-tertiaryContainer/50 border-t-1 border-b-1 border-l-1 border-tertiary/30 rounded-tl-3xl rounded-bl-3xl min-w-[250px]'>
             {children}
         </div>
     )

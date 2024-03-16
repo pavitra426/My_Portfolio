@@ -1,9 +1,7 @@
 import AppBar from '@/app/components/AppBar'
 import ToolsBar from '@/app/components/ToolsBar'
 import ToolsNavButton from '@/app/components/ToolsNavButton'
-import AdobeXD from '@/app/icons/tools/AdobeXD'
 import Django from '@/app/icons/tools/Django'
-import Figma from '@/app/icons/tools/Figma'
 import NextJS from '@/app/icons/tools/NextJS'
 import ReactJS from '@/app/icons/tools/ReactJS'
 import { Handyman } from '@mui/icons-material'
@@ -26,9 +24,9 @@ export default function Layout({children}) {
                         </div>
                     </div>
                     <div className='flex flex-col w-full h-full p-3 gap-1'>
-                        <ToolsNavButton text={"React JS"} link={"/portfolio/design/figma"} icon={<ReactJS forButton={true}/>} />
-                        <ToolsNavButton text={"Next JS"} link={"/portfolio/design/figma"} icon={<NextJS forButton={true}/>} />
-                        <ToolsNavButton text={"Django"} link={"/portfolio/design/adobe-xd"} icon={<Django forButton={true} />} />
+                        <ToolsNavButton text={"React JS"} link={"/portfolio/web-development/react-js"} icon={<ReactJS forButton={true}/>} />
+                        <ToolsNavButton text={"Next JS"} link={"/portfolio/web-development/next-js"} icon={<NextJS forButton={true}/>} />
+                        <ToolsNavButton text={"Django"} link={"/portfolio/web-development/django"} icon={<Django forButton={true} />} />
                     </div>
                 </ToolsBar>
             </div>

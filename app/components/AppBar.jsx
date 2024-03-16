@@ -19,13 +19,10 @@ export default function AppBar({title}) {
             timeline.fromTo(backButtonRef.current, {
                 rotation: 0,
                 opacity: 0,
-                x: -300,
             }, {
                 opacity: 1,
                 rotation: 360,
                 duration: 0.5,
-                x: 0,
-                ease: 'circ',
             });
             timeline.fromTo(appbarTitleRef.current, {
                 opacity: 0,

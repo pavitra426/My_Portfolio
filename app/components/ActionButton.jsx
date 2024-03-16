@@ -1,6 +1,5 @@
-'use client';
-
-import { Button, Link } from '@nextui-org/react';
+import { Button } from '@nextui-org/button';
+import { Link } from '@nextui-org/link';
 import React from 'react'
 
 export default function ActionButton() {

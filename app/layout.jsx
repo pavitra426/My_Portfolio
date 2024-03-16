@@ -3,6 +3,7 @@ import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import Provider from './provider'
 import Navbar from "./components/navbar";
+import Blob from "./components/animation/Blob";
 
 const poppins = Poppins({subsets: ["latin"], weight: [
   "100", "200", "300", "400", "500", "600", "700", "800", "900"
@@ -19,6 +20,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className} id="body">
         <Provider>
+          <div className="w-full h-full pointer-events-none absolute bottom-0 right-0">
+            <Blob />
+          </div>
           <div className="flex flex-col w-full h-full">
             <NextTopLoader
               shadow={true}
