@@ -4,6 +4,7 @@ import NextTopLoader from "nextjs-toploader";
 import Provider from './provider'
 import Navbar from "./components/navbar";
 import Blob from "./components/animation/Blob";
+import { Suspense } from "react";
 
 const poppins = Poppins({subsets: ["latin"], weight: [
   "100", "200", "300", "400", "500", "600", "700", "800", "900"
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
             />
             <div className="flex items-center justify-center overflow-hidden" style={{width: '100%', height: '100svh'}}>
               <Navbar />
-              <div className="flex items-center justify-center w-full h-full relative">
+              <div className="flex items-center justify-center w-full h-full">
                 {children}
               </div>
             </div>

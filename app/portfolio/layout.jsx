@@ -5,7 +5,7 @@ import { Divider } from '@nextui-org/divider'
 
 export default function Layout({children}) {
   return (
-    <div className='flex w-full h-full items-center justify-center backdrop-blur-sm bg-background/80'>
+    <div className='flex w-full h-full items-center justify-center backdrop-blur-md bg-background/80'>
         <div className="flex flex-col bg-surfaceVariant/0 items-start p-5 h-full gap-5">
             <div className='uppercase text-foreground text-small pl-5 tracking-widest'>
                 Categories

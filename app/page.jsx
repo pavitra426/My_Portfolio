@@ -1,14 +1,29 @@
+import CodeBlock from './components/CodeBlock'
 import ActionButton from './components/ActionButton'
-import ProfileImage from './components/ProfileImage'
-import SkillsRound from './components/SkillsRound'
-import Canvas from './components/Canvas'
-import TextArea from './components/TextArea'
+import { WavingHand } from '@mui/icons-material'
 
 export default function page() {
 
   return (
-    <div className='w-full h-full bg-background/60 backdrop-blur-sm'>
-      Home
+    <div className='flex items-center justify-center w-full h-full bg-background/60 backdrop-blur-sm p-3'>
+      <div className='w-full h-full flex flex-col gap-3 items-start justify-center py-3 px-7'>
+        <div className='flex items-center gap-2 textflow text-4xl text-foreground'>
+          <div>
+            Hello
+          </div>
+          <div className='text-warning'>
+            <WavingHand /><span className='text-foreground'>,</span>
+          </div>
+        </div>
+        <div className='textflow text-4xl text-foreground'>
+          This is <span className='text-warning'>Pavitra Patel</span>,
+          Welcome to my portfolio !
+        </div>
+        <div className='pt-2'>
+          <ActionButton />
+        </div>
+      </div>
+      <CodeBlock />
     </div>
     // <>
     // <Canvas />
